@@ -146,19 +146,17 @@ void GLViewNewModule::onKeyDown(const SDL_KeyboardEvent& key)
 		if (speech_check == 1) 
 		{
 			cout << "Enermy voice detected!!!" << endl;
-			Vector cur_cam_pos = this->cam->getPosition();
 			SoundManager::play3DSound("../../../shared/mm/sounds/voice/WOHuman Your Teacher Looks Funny.wav", Vector(0, 0, 5), false, false, true);
-			SoundManager::sound3D.back()->setVolume(0.9f);
-			SoundManager::sound3D.back()->setMinDistance(10.0f);
+			SoundManager::sound3D.back()->setVolume(0.95f);
+			SoundManager::sound3D.back()->setMinDistance(9.0f);
 			speech_check = 0;
 		}
 		else
 		{
 			cout << "Enermy is talking !!!" << endl;
-			Vector cur_cam_pos = this->cam->getPosition();
 			SoundManager::play3DSound("../../../shared/mm/sounds/voice/WOHuman Making Me Laugh.wav", Vector(0, 0, 5), false, false, true);
-			SoundManager::sound3D.back()->setVolume(0.9f);
-			SoundManager::sound3D.back()->setMinDistance(10.0f);
+			SoundManager::sound3D.back()->setVolume(0.95f);
+			SoundManager::sound3D.back()->setMinDistance(9.0f);
 			speech_check = 1;
 		}
 	}
